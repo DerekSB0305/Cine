@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    background-color: #9c9c9c;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+img {
+    max-width: 200px;
+    margin-top: 10px;
+}

@@ -1,0 +1,144 @@
+:root {
+    --color1: #005013;
+    --color2: #0f6123;
+    --color3: #1e7333;
+    --color4: #2d8442;
+    --color5: #3c9552;
+    --blanco: #ffffff;
+    --gris: #8c8c8c;
+
+    --fuentePrincipal: "Staatliches", sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /** Globales **/
+  body {
+    background-color: var();
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var();
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+  }
+  h1, h2, h3 {
+    text-align: center;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  /** header **/ 
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /** Footer **/
+
+  /** navegacion **/
+  .navegacion {
+    background-color: var(--color4);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /** Separación forma nueva**/
+  }
+  .navegacion__logo {
+
+    height: 150px;
+  }
+  .navegacion__texto { 
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* margin-right: 2rem; */
+  }
+  
+  .navegacion__texto--activo {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  } 
+  /** Grid **/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+  }
+  @media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+  /** Asientos**/
+  button.seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color1);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--color1);
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--blanco);
+  }
+  button.seat:hover {
+    background-color: var(--color5);
+    color: var(--blanco);
+  }
+
+  .row-label {
+    grid-column: 1;
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+    color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .screen {
+    grid-column: span 13;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--gris);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+ 
+  
