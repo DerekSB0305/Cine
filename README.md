@@ -1,4 +1,4 @@
-#Desarrollo cada uno de los pasos a seguir en el desing doc.
+# Desarrollo cada uno de los pasos a seguir en el desing doc.
 
 ## 1.	Registro de Cuenta.
 - **Nombre(s):** Introducir su nombre
