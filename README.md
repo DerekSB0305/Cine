@@ -74,7 +74,7 @@ Teléfono: Introduce número telefónico
 Contraseña: Introduce clave de acceso al sitio
 Botón: Clic al botón Registrar
 ## 2.	Iniciar sesión 
-Correo: Introducir correo como identificador
+**Correo:** Introducir correo como identificador
 Contraseña: Introducir contraseña para entrar
 Botón: Clic al botón Iniciar Sesión 
 ## 3.	Index (Página Principal) 
