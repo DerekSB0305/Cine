@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Client>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Movies>
  */
-class ClientFactory extends Factory
+class MoviesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,7 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=> fake()->sentence(4),
-            'mail'=> fake()->sentence(3),
-            'phone_number'=> fake()->sentence(1)
+            //
         ];
     }
 }

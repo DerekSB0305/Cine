@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ticket>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Schedules>
  */
-class TicketFactory extends Factory
+class SchedulesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,7 @@ class TicketFactory extends Factory
     public function definition(): array
     {
         return [
-            'id_schedule'=> fake()->sentence(2),
-            'seat'=> fake()->sentence(2),
-            'price'=> fake()->sentence(2)
+            //
         ];
     }
 }
