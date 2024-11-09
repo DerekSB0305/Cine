@@ -8,7 +8,7 @@
 </head>
 <body>
   <x-navbarCine/>
-
+  
   <main>
    
 <div class="bg-white">

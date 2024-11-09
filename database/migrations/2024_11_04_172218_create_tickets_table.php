@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreign('client_id')->references('id')->on('clients');
             $table->unsignedBigInteger('schedule_id'); //Foranea
             $table->foreign('schedule_id')->references('id')->on('schedules');
-            $table->string('seat', length: 20);
             $table->integer('price');
             $table->dateTime('reservation_date');
             $table->timestamps();

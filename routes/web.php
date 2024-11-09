@@ -17,35 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Seats/', function () {
-    return view('Seats');
-});
-
 Route::get('/cartelera', function(){
-    return view('cartelera');
+    return view('billboard');
 });
 
 Route::get('/admin', function(){
     return view('admin');
 });
 
-Route::get('/Horario', function(){
-    return view('Horario');
+Route::get('/horario', function(){
+    return view('schedule');
 });
 
-Route::get('/soon2', function(){
+Route::get('/proximamente', function(){
     return view('soon2');
 });
 
 Route::get('/addMovies', function(){
     return view('addMovies');
 });
-Route::get('/login', function(){
-    return view('login');
-});
 
 Route::get('/personalData', function(){
-    return view('/personalData');
+    return view('personalData');
 });
 
 Route::get('/index', function () {
