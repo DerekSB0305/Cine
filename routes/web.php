@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,24 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/cartelera', function(){
-    return view('billboard');
-});
+/**  Vistas del administrador **/
 
 Route::get('/admin', function(){
     return view('admin');
-});
-
-Route::get('/horario', function(){
-    return view('schedule');
-});
-
-Route::get('/proximamente', function(){
-    return view('soon2');
 });
 
 Route::get('/addMovies', function(){
@@ -41,10 +28,23 @@ Route::get('/personalData', function(){
     return view('personalData');
 });
 
-Route::get('/index', function () {
-    return view('index');
+/**  Vistas del usuario **/
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/detalles', function () {
-    return view('details');
-});
+Route::get('/index', 
+[MovieController::class, 'index']);
+
+Route::get('/detalles', 
+[MovieController::class, 'details']);
+
+Route::get('/cartelera', 
+[MovieController::class, 'billboard']);
+
+Route::get('/proximamente', 
+[MovieController::class, 'comingSoon']);
+
+Route::get('/horario', 
+[MovieController::class, 'schedule']);
