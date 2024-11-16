@@ -1,41 +1,50 @@
-@extends('layouts.app')
-@section('content')
-    <link rel="stylesheet" href="{{asset('css/Style_admin.css')}}">
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Subir Nueva Película</h1>
-    <form>
-        <label for="titulo">Título:</label>
-        <input class="input" type="text" id="titulo" name="titulo"><br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+</head>
 
-        <label for="genero">Género:</label>
-        <input type="text" id="genero" name="genero"><br><br>
+<body>
+    <h1>Peliculas Administrador</h1>
+    <a href="/admin/peliculas/crear">Crear Pelicula</a>
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>genero</th>
+            <th>duración</th>
+            <th>Clasificación</th>
+            <th>Sinopsis</th>
+            <th>imagen</th>
+            <th>Acciones</th>
+        </tr>
+        <tbody>
+            @foreach ($movies as $movie)
+            <tr>
+                <td>{{$movie->title}}</td>
+                <td>{{$movie->genre_id}}</td>
+                <td>{{$movie->duration}}</td>
+                <td>{{$movie->classification_id}}</td>
+                <td>{{$movie->synopsis}}</td>
+                <td>{{$movie->movie_img}}</td>
+                <td>
+                    <a href="/admin/peliculas/{{ 
+                    $movie->id}}/editar"> Editar</a>
+                    <form action="/admin/peliculas/{{
+                    $movie->id}}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button type="submit">Eliminar</button>
+                    </form>
+                    <!-- <a href="/admin/peliculas/{{ 
+                    $movie->id}}/delete">Eliminar</a> -->
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
 
-        <label for="duracion">Duración (minutos):</label>
-        <input type="number" id="duracion" name="duracion"><br><br>
-
-        <label for="horario">Horario:</label>
-        <input type="text" id="horario" name="horario"><br><br>
-
-        <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" onchange="previewImage()">
-        <img id="preview" src="#" alt="Vista previa de la imagen">
-
-        <input type="submit" value="Subir Película">
-    </form>
-    <script>
-        function previewImage() {
-            const imageInput = document.getElementById('imagen');
-            const previewImage = document.getElementById('preview');
-
-            if (imageInput.files && imageInput.files[0]) {
-                const reader = new FileReader();
-
-                reader.onload = (e) => {
-                    previewImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(imageInput.files[0]);
-            }
-        }
-    </script>
-@endsection
+</html>

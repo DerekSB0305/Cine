@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminMovieController;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,17 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 /**  Vistas del administrador **/
 
-Route::get('/admin', function(){
-    return view('admin');
-});
+Route::get('/admin/peliculas', 
+[AdminMovieController::class, 'index']);
 
-Route::get('/addMovies', function(){
-    return view('addMovies');
-});
+Route::get('/admin/peliculas/crear',
+[AdminMovieController::class, 'create']);
 
-Route::get('/personalData', function(){
-    return view('personalData');
-});
+Route::post('/admin/peliculas/crear',
+[AdminMovieController::class, 'save']);
+
+Route::delete('/admin/peliculas/{id}',[AdminMovieController::class, 'destroy']);
 
 /**  Vistas del usuario **/
 
