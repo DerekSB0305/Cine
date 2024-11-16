@@ -9,20 +9,20 @@ class Movies extends Model
 {
     use HasFactory;
 
-    //  //Relación uno a muchos (inversa)
-    //  public function genre(){
-    //     return $this->belongsTo('app\Models\Genres');
-    // }
+      //Relación uno a muchos (inversa)
+      public function genre(){
+         return $this->belongsTo(Genres::class);
+     }
 
-    // public function classification(){
-    //     return $this->belongsTo('app\Models\Classifications');
-    // }
+     public function classification(){
+         return $this->belongsTo(Classifications::class);
+     }
 
-    // //Relación uno a muchos
-    //   //Relación uno a muchos
-    //   public function schedules(){
-    //     return $this->hasMany('app\Models\Schedules');
-    // }
+     //Relación uno a muchos
+       //Relación uno a muchos
+       public function schedules(){
+         return $this->hasMany('app\Models\Schedules');
+     }
 
     protected $fillable = [
         'title',
@@ -30,6 +30,6 @@ class Movies extends Model
         'duration',
         'classification_id',
         'synopsis',
-        'movie_img',
+        'image_url',
     ];
 }

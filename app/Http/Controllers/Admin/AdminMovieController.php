@@ -11,7 +11,6 @@ class AdminMovieController extends Controller
     public function index()
     {
         $movies = Movies::get();
-
         return view('admin.movies.index',
         compact('movies'));
     }
@@ -36,10 +35,13 @@ class AdminMovieController extends Controller
            'duration' => $request->duration,
            'classification_id' => $request->classification_id,
            'synopsis' => $request->synopsis,
-           'movie_img' => $request->movie_img 
+           'image_url' => $request->image_url 
         ]);
+        
          return redirect(url('/admin/peliculas'));
     }
+
+    
 
     Public function destroy(Request $request)
     {

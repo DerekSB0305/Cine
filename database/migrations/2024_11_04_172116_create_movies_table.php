@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('classification_id')->nullable(); //Foranea
             $table->foreign('classification_id')->references('id')->on('classifications')->onDelete('set null');
             $table->string('synopsis', length: 200);
-            $table->string('movie_img', length: 100)->nullable();
+            $table->string('image_url', length: 100)->nullable();
             $table->timestamps();
         });
     }

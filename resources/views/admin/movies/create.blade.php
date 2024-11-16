@@ -9,10 +9,9 @@
 
 <body>
     <h1>Crear Nueva pelicula </h1>
-    <form action="/admin/peliculas/crear" method="post">
+    <form action="/admin/peliculas/crear" autocomplete="off" method="post">
         @csrf
         <input type="text" name="title" id="title" placeholder="Escibe el titulo" required>
-        <label>Generos</label>
         <select name="genre_id">
             <option value="1">Acción</option>
             <option value="2">Aventura</option>
@@ -26,7 +25,6 @@
 
         <input type="text" name="duration" id="duration" placeholder="Escribe la duración" required>
 
-        <label>Clasificaciones</label>
         <select name="classification_id">
             <option value="1">AA</option>
             <option value="2">A</option>

@@ -14,23 +14,23 @@ class ClassificationsSeeder extends Seeder
     public function run(): void
     {
         $classification = new Classifications();
-        $classification->classification = "AA";
+        $classification->name = "AA";
         $classification->save();
 
         $classification2 = new Classifications();
-        $classification2->classification = "A";
+        $classification2->name = "A";
         $classification2->save();
 
         $classification3 = new Classifications();
-        $classification3->classification = "B";
+        $classification3->name = "B";
         $classification3->save();
 
         $classification4 = new Classifications();
-        $classification4->classification = "C";
+        $classification4->name = "C";
         $classification4->save();
 
         $classification5 = new Classifications();
-        $classification5->classification = "D";
+        $classification5->name = "D";
         $classification5->save();
     }
 }

@@ -11,6 +11,6 @@ class Genres extends Model
     
     //Relacion uno a muchos
     public function movies(){
-        return $this->hasMany('app\Models\Movies');
+        return $this->hasMany(Movies::class);
     }
 }

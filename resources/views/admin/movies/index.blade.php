@@ -20,13 +20,14 @@
             <th>imagen</th>
             <th>Acciones</th>
         </tr>
+
         <tbody>
             @foreach ($movies as $movie)
             <tr>
                 <td>{{$movie->title}}</td>
-                <td>{{$movie->genre_id}}</td>
+                <td>{{$movie->genre->name ?? 'Sin género' }}</td>
                 <td>{{$movie->duration}}</td>
-                <td>{{$movie->classification_id}}</td>
+                <td>{{$movie->classification->name ?? 'Sin género'}}</td>
                 <td>{{$movie->synopsis}}</td>
                 <td>{{$movie->movie_img}}</td>
                 <td>
