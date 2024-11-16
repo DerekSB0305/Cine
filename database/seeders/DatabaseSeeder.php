@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Classifications;
 use App\Models\Schedule;
 use Illuminate\Database\Seeder;
 
@@ -36,5 +37,9 @@ class DatabaseSeeder extends Seeder
         // $this->call([
         //     ScheduleSeeder::class,
         // ]);
+
+        $this->call(GenresSeeder::class);
+
+        $this->call(ClassificationsSeeder::class);
     }
 }
