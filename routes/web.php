@@ -26,7 +26,8 @@ Route::get('/admin/peliculas/crear',
 Route::post('/admin/peliculas/crear',
 [AdminMovieController::class, 'save']);
 
-Route::delete('/admin/peliculas/{id}',[AdminMovieController::class, 'destroy']);
+Route::delete('/admin/peliculas/{id}',
+[AdminMovieController::class, 'destroy']);
 
 /**  Vistas del usuario **/
 
