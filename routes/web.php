@@ -26,6 +26,12 @@ Route::get('/admin/peliculas/crear',
 Route::post('/admin/peliculas/crear',
 [AdminMovieController::class, 'save']);
 
+Route::get('/admin/peliculas/{id}/editar',
+[AdminMovieController::class, 'edit']);
+
+Route::put('/admin/peliculas/{id}',
+[AdminMovieController::class, 'update']) -> name('movies.update');
+
 Route::delete('/admin/peliculas/{id}',
 [AdminMovieController::class, 'destroy']);
 

@@ -29,7 +29,14 @@
                 <td>{{$movie->duration}}</td>
                 <td>{{$movie->classification->name ?? 'Sin género'}}</td>
                 <td>{{$movie->synopsis}}</td>
-                <td>{{$movie->movie_img}}</td>
+                <td>
+                    @if ($movie->image_url)
+                    <img src="{{ asset('storage/' . str_replace('public/', '', $movie->image_url)) }}" alt="{{ $movie->title }}" width="100">
+                    @else
+                    <span>Sin imagen</span>
+                    @endif
+                </td>
+
                 <td>
                     <a href="/admin/peliculas/{{ 
                     $movie->id}}/editar"> Editar</a>
