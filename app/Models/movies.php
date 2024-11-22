@@ -18,7 +18,7 @@ class Movies extends Model
          return $this->belongsTo(Classifications::class);
      }
 
-     //Relación uno a muchos
+     //Relación uno a muchos.
        //Relación uno a muchos
        public function schedules(){
          return $this->hasMany('app\Models\Schedules');

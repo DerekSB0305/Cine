@@ -9,7 +9,7 @@ class Classifications extends Model
 {
     use HasFactory;
     
-    // Relacion uno a muchos
+    // Relacion uno a muchos.
     public function movies(){
         return $this->hasMany(Movies::class);
 }
