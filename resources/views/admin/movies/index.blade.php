@@ -33,7 +33,7 @@
                 <td class="border border-slate-800">{{$movie->synopsis}}</td>
                 <td>
                     @if ($movie->image_url)
-                    <img src="{{ $movie->image_url }}" alt="{{ $movie->title }}" width="100">
+                    <img src="{{ asset('storage/' . str_replace('public/', '', $movie->image_url)) }}" alt="{{ $movie->title }}" width="100">
                     @else
                     <span>Sin imagen</span>
                     @endif
