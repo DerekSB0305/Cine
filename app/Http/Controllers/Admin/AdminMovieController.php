@@ -23,20 +23,26 @@ class AdminMovieController extends Controller
 
     public function save(Request $request)
     {
+        
         //Validación
         $request->validate([
             'title' => ['required', 'string'],
             'duration' => ['required', 'string'],
-            'synopsis' => ['required', 'string']
+            'synopsis' => ['required', 'string'],
+            'image' => ['required', 'image', 'max:2048'] // Valida que la imagen sea válida
         ]);
+
+        // Guardar la imagen en el almacenamiento
+    $path = $request->file('image')->store('public'); // Almacena la imagen en la carpeta
         //Insertar Datos
         Movies::create([
+            
            'title' => $request->title,
            'genre_id' => $request->genre_id,
            'duration' => $request->duration,
            'classification_id' => $request->classification_id,
            'synopsis' => $request->synopsis,
-           'image_url' => $request->image_url 
+           'image_url' => $path 
         ]);
         
          return redirect(url('/admin/peliculas'));
