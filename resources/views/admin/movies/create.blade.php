@@ -14,7 +14,7 @@
         </div>
 
        
-        <form action="/admin/peliculas/crear" method="post" autocomplete="off" class="p-6 space-y-6">
+        <form action="/admin/peliculas/crear" method="post" autocomplete="off" class="p-6 space-y-6" enctype="multipart/form-data">
             @csrf
 
           
@@ -70,6 +70,12 @@
                 <input type="file" name="image" id="image" onchange="previewImage(event)"
                     class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
+            <div class="mt-6 text-center" id="imagePreviewContainer" style="display: none;">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Vista Previa de la Imagen</label>
+                <div class="inline-block">
+                    <img id="imagePreview" src="#" alt="Imagen de la película" class="w-48 h-48 object-cover rounded-md shadow-md">
+                </div>
+            </div>
              
             <div class="text-center">
                 <button type="submit"
