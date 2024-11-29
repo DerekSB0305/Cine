@@ -34,8 +34,9 @@
                     <option value="4">Comedia</option>
                     <option value="5">Drama</option>
                     <option value="6">Fantasía</option>
-                    <option value="7">Suspenso</option>
-                    <option value="8">Terror</option>
+                    <option value="7">Musical</option>
+                    <option value="8">Suspenso</option>
+                    <option value="9">Terror</option>
                 </select>
             </div>
 

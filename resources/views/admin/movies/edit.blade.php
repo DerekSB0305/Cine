@@ -35,8 +35,9 @@
                         <option value="4" {{ $movies->genre_id == 4 ? 'selected' : '' }}>Comedia</option>
                         <option value="5" {{ $movies->genre_id == 5 ? 'selected' : '' }}>Drama</option>
                         <option value="6" {{ $movies->genre_id == 6 ? 'selected' : '' }}>Fantasía</option>
-                        <option value="7" {{ $movies->genre_id == 7 ? 'selected' : '' }}>Suspenso</option>
-                        <option value="8" {{ $movies->genre_id == 8 ? 'selected' : '' }}>Terror</option>
+                        <option value="7" {{ $movies->genre_id == 7 ? 'selected' : '' }}>Musical</option>
+                        <option value="8" {{ $movies->genre_id == 8 ? 'selected' : '' }}>Suspenso</option>
+                        <option value="9" {{ $movies->genre_id == 9 ? 'selected' : '' }}>Terror</option>
                     </select>
                 </div>
 
