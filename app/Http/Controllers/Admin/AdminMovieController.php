@@ -76,4 +76,5 @@ class AdminMovieController extends Controller
 
         return redirect(url('/admin/peliculas'));
     }
+    
 }

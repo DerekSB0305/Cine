@@ -32,4 +32,5 @@ class Movies extends Model
         'synopsis',
         'image_url',
     ];
+    
 }

@@ -28,8 +28,16 @@ class MovieController extends Controller
         return view('movies.comingSoon');
     }
 
-    public function schedule()
+    public function schedule($id)
     {
-        return view('movies.schedule');
+        // Buscar la película por ID
+        $movie = Movies::findOrFail($id);
+
+        // Pasar la película a la vista
+        return view('movies.schedule', compact('movie'));
     }
+  
 }
+
+
+

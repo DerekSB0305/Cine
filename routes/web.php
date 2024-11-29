@@ -53,5 +53,8 @@ Route::get('/cartelera',
 Route::get('/proximamente', 
 [MovieController::class, 'comingSoon']);
 
-Route::get('/horario', 
-[MovieController::class, 'schedule']);
+Route::get('/horario/{id}',
+ [MovieController::class, 'schedule']);
+
+
+
