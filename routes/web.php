@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminMovieController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/** Login */
+
+Route::view('/login', "login")->name('login');
+Route::view('/registro', "registro")->name('registro');
+Route::view('/admin/peliculas', "admin")->middleware('auth')->name('admin');
+
+Route::post('/validar-registro',[loginController::class, 'registro'])->name('validar-registro');
+Route::post('/inicia-sesion', [loginController::class, 'login'])->name('inicia-sesion');
+Route::get('/logout', [loginController::class, 'logout'])->name('logout');
+
 
 /**  Vistas del administrador **/
 
